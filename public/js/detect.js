@@ -7,8 +7,7 @@ $(function() {
             {dataType: 'json'},
         ).done(function(data) {
             var data_sort = data.sort((a, b) => b.wscore - a.wscore);
-            console.log(data_sort.length);
-            for (var i = 0; i < data_sort.length; i++) {
+            for (var i = 0; i < data_sort.length && i < 32; i++) {
                 var str_s = '<div class="col-md-3 mb-3">' + 
                             '<div class="card h-100">' +
                               '<div class="card-body">' + 
@@ -29,7 +28,6 @@ $(function() {
                 var str = str_s + str_m + str_e;
                 $('#res-box').append(str);
             }
-            console.log("fuck");
         }).fail(function(xhr, status) {
             console.log('失败: ' + xhr.status + ', 原因: ' + status);
         })
