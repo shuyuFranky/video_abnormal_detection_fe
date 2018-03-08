@@ -13,3 +13,12 @@ body {
     padding-top: 56px;
   }
 }
+
+.res {
+  width: 200px;
+  height: 167px;
+}
+
+.card-footer {
+  float: center;
+}
